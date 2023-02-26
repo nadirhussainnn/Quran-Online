@@ -14,7 +14,6 @@ import Parahs from "./SubPages/Parahs";
 import Surahs from "./SubPages/Surahs";
 import Stats from "./SubPages/Stats";
 import Settings from "./SubPages/Settings";
-import Login from "../Login";
 import Ahadith from "./SubPages/Ahadith";
 import IslamicVideos from "./SubPages/IslamicVideos";
 import { useNavigate } from "react-router-dom";
