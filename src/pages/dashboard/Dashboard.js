@@ -30,7 +30,7 @@ export default function Dashboard() {
 
     const renderContent = () => {
 
-        if (page === "/") {
+        if (page === "Logout") {
             return <Login /> 
         }
         else if (page === "Overview") {
