@@ -26,7 +26,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         setUser(JSON.parse(localStorage.getItem("user")))
-    }, [localStorage.getItem("user")])
+    }, [])
 
     const renderContent = () => {
 

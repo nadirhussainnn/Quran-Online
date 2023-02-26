@@ -3,7 +3,7 @@
  * @version 1.0
  */
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { apiPOST } from "../apiService/apiService";
 import { toast } from 'react-toastify';
