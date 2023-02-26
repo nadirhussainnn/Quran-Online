@@ -1,3 +1,7 @@
+# .env sample
+REACT_APP_SERVER_URL=http://localhost:8000/api <br />
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
