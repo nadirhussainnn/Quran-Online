@@ -66,12 +66,8 @@ const Sidebar = (props) => {
         if(option==="Logout"){
             localStorage.removeItem("token")
             localStorage.removeItem("user")
-            props.setPage("/")
-            return
         }
-        else{
-            props.setPage("Settings")
-        }
+            props.setPage(option)
     }
 
     return (

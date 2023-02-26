@@ -17,13 +17,14 @@ import Settings from "./SubPages/Settings";
 import Login from "../Login";
 import Ahadith from "./SubPages/Ahadith";
 import IslamicVideos from "./SubPages/IslamicVideos";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Dashboard() {
 
     const [user, setUser] = useState(null)
     const [page, setPage] = useState("Dashboard")
-
+    const navigate=useNavigate()
     useEffect(() => {
         setUser(JSON.parse(localStorage.getItem("user")))
     }, [])
@@ -31,7 +32,7 @@ export default function Dashboard() {
     const renderContent = () => {
 
         if (page === "Logout") {
-            return <Login /> 
+            navigate("/")
         }
         else if (page === "Overview") {
             return <OverView />
