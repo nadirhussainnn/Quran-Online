@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 import { apiPOST } from "../apiService/apiService";
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
-//assets
-import app_logo from "../assets/icons/app_logo.png"
 
 //theme
 import './styles.scss'
@@ -60,11 +58,7 @@ export default function Register() {
 
 
   return (
-    <div className="container">
-      <div className="logo">
-        <img src={app_logo} className="logo-png" alt="logo" />
-      </div>
-      <div className="login-register-container">
+    <div className="login-register-container">
         <div className="right-part">
           <p className="sign-in-text">Sign up to </p>
           <p className="sign-in-sub-text">The Quran Online </p>
@@ -89,6 +83,5 @@ export default function Register() {
           </div>
         </div>
       </div>
-    </div>
   )
 }

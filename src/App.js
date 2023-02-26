@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Register from "./pages/Register"
 //theme
 import app_logo from "./assets/icons/app_logo.png"
@@ -35,10 +35,12 @@ export default function App() {
 }
 
 const Nav = () => {
+  let navigate=useNavigate()
+
   return (
     <div className="container">
       <div className="logo">
-        <img src={app_logo} className="logo-png" alt="logo" />
+        <img src={app_logo} className="logo-png" alt="logo" onClick={()=>navigate("/")}/>
       </div>
     </div>
   )

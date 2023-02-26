@@ -7,7 +7,16 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 
 //theme
+import notification from "../../assets/icons/notification.png"
 import './styles.scss'
+import OverView from "./SubPages/OverView";
+import Parahs from "./SubPages/Parahs";
+import Surahs from "./SubPages/Surahs";
+import Stats from "./SubPages/Stats";
+import Settings from "./SubPages/Settings";
+import Login from "../Login";
+import Ahadith from "./SubPages/Ahadith";
+import IslamicVideos from "./SubPages/IslamicVideos";
 
 
 export default function Dashboard() {
@@ -21,10 +30,11 @@ export default function Dashboard() {
 
     const renderContent = () => {
 
-        if (page === "Dashboard") {
-            return (
-                <h1>Dashboard</h1>
-            )
+        if (page === "/") {
+            return <Login /> 
+        }
+        else if (page === "Overview") {
+            return <OverView />
         }
         else if (page === "Parahs") {
             return <Parahs />
@@ -32,6 +42,19 @@ export default function Dashboard() {
         else if (page === "Surahs") {
             return <Surahs />
         }
+        else if (page === "Ahadith") {
+            return <Ahadith />
+        }
+        else if (page === "IslamicVideos") {
+            return <IslamicVideos />
+        }
+        else if (page === "Stats") {
+            return <Stats />
+        }
+        else if (page === "Settings") {
+            return <Settings />
+        }
+        
 
     }
     return (
@@ -46,6 +69,9 @@ export default function Dashboard() {
                         <div className="search-section">
                             <input type={"search"} placeholder="Search" className="search-field"></input>
                         </div>
+                        <div className="notf-container">
+                            <img src={notification} alt="icon" className="notf-icon"></img> 
+                        </div>
                     </div>
                 </div>
 
@@ -54,18 +80,5 @@ export default function Dashboard() {
                 </div>
             </div>
         </div>
-    )
-}
-
-
-const Parahs = () => {
-    return (
-        <h1>Parahs</h1>
-    )
-}
-
-const Surahs = () => {
-    return (
-        <h1>Surahs</h1>
     )
 }
