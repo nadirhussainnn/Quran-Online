@@ -1,0 +1,31 @@
+.page-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+    min-height: 76vh;
+    .parahs-container{
+    
+        .parah{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            .arabic-name{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .english-name{
+                font-weight: 400;
+                font-size: 16px;
+    
+            }
+        }
+    }   
+    .pagination{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #F0EFFF;
+    }
+}
