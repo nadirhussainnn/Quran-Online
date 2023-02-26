@@ -1,7 +1,45 @@
 import React from 'react'
 
+import { Route, Routes } from 'react-router-dom'
+import Register from "./pages/Register"
+//theme
+import app_logo from "./assets/icons/app_logo.png"
+import './pages/styles.scss'
+import Login from './pages/Login'
+import Dashboard from './pages/dashboard/Dashboard'
+
+
 export default function App() {
   return (
-    <h1 className='text-3xl font-bold underline'>App</h1>
+    <Routes>
+      <Route exact path="/" element={
+        <>
+          <Nav />
+          <Login />
+        </>
+      } />
+      <Route path="/register" element={
+        <>
+          <Nav />
+          <Register />
+        </>
+      } />
+      <Route path="/dashboard" element={
+        <>
+          <Nav />
+          <Dashboard />
+        </>
+      } />
+    </Routes>
+  )
+}
+
+const Nav = () => {
+  return (
+    <div className="container">
+      <div className="logo">
+        <img src={app_logo} className="logo-png" alt="logo" />
+      </div>
+    </div>
   )
 }
